@@ -1,4 +1,4 @@
-package invoceitem
+package invoiceitem
 
 type Item struct {
 	id      uint

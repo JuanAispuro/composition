@@ -11,8 +11,7 @@ type Invoice struct {
 	city    string
 	total   float64
 	client  customer.Customer
-	//Con esto es de uno a muchos
-	items []invoiceitem.Item
+	items   []invoiceitem.Item
 }
 
 // Settotal is the setter of Invoice.total
