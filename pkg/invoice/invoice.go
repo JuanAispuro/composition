@@ -7,4 +7,5 @@ type Invoice struct {
 	city    string
 	total   float64
 	client  customer.Customer
+	items
 }
