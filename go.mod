@@ -1,3 +1,3 @@
-module github.com/JuanAispuro/composition/pkg/customer
+module github.com/JuanAispuro/composition
 
 go 1.19
