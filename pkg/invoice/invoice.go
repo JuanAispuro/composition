@@ -15,20 +15,19 @@ type Invoice struct {
 	items []invoiceitem.Item
 }
 
+// Settotal is the setter of Invoice.total
+func (i *Invoice) SetTotal() {
+	for _, item := range i.items {
+		i.total += item.Value()
+	}
+}
+
 // Constructor
-func New(country, city string, client customer.Customer,
-	items []invoiceitem.Item) Invoice {
+func New(country, city string, client customer.Customer, items []invoiceitem.Item) Invoice {
 	return Invoice{
 		country: country,
 		city:    city,
 		client:  client,
 		items:   items,
-	}
-}
-
-// Settotal is the setter of Invoice.total
-func (i *Invoice) SetTotal() {
-	for _, item := range i.items {
-		i.total += item.Value()
 	}
 }
